@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <v-main>
+          <v-container>
+            <h1 class="font-weight-bold text-center my-5">BELAJAR AXIOS</h1>
+            <v-layout row class="justify-center mx-4" style="gap: 0.5rem">
+              <v-btn depressed small color="primary" id="get" @click="getTodos">
+                GET
+              </v-btn>
+
+              <v-btn
+                depressed
+                small
+                color="success"
+                id="post"
+                @click="postTodos"
+              >
+                POST
+              </v-btn>
+
+              <v-btn
+                depressed
+                small
+                color="warning"
+                id="update"
+                @click="updateTodos"
+              >
+                PUT/PATCH
+              </v-btn>
+
+              <v-btn
+                depressed
+                small
+                color="error"
+                id="delete"
+                @click="deleteTodos"
+              >
+                DELETE
+              </v-btn>
+
+              <v-btn
+                depressed
+                small
+                color="secondary"
+                id="sim"
+                @click="simTodos"
+              >
+                Sim Request
+              </v-btn>
+
+              <v-btn
+                depressed
+                small
+                color="secondary"
+                id="Headers"
+                @click="headerTodos"
+              >
+                Custom Headers
+              </v-btn>
+
+              <v-btn
+                depressed
+                small
+                color="secondary"
+                id="transform"
+                @click="transformTodos"
+              >
+                Transform
+              </v-btn>
+
+              <v-btn
+                depressed
+                small
+                color="secondary"
+                id="error"
+                @click="errorTodos"
+              >
+                Error Handling
+              </v-btn>
+
+              <v-btn
+                depressed
+                small
+                color="secondary"
+                id="handling"
+                @click="cancelTodos"
+              >
+                Cancel
+              </v-btn>
+            </v-layout>
+            <v-divider class="my-8"></v-divider>
+
+            <div id="res" ref="res" class="d-none">
+              <!-- respon -->
+              <v-card outlined class="mx-auto mt-5" rounded="lg">
+                <v-card-title class="font-weight-bold" id="status"
+                  >Status:
+                </v-card-title>
+              </v-card>
+              <!-- respon -->
+              <!-- Headers -->
+              <v-card outlined class="mx-auto mt-5" rounded="lg">
+                <div class="blue-grey lighten-5">
+                  <v-card-title>Headers</v-card-title>
+                </div>
+                <v-card-text>
+                  <pre id="textHeader"></pre>
+                </v-card-text>
+              </v-card>
+              <!-- Headers -->
+              <!-- data -->
+              <v-card outlined class="mx-auto mt-5" rounded="lg">
+                <div class="blue-grey lighten-5">
+                  <v-card-title>Data</v-card-title>
+                </div>
+                <v-card-text>
+                  <pre id="textData"></pre>
+                </v-card-text>
+              </v-card>
+              <!-- data -->
+              <!-- config -->
+              <v-card outlined class="mx-auto mt-5" rounded="lg">
+                <div class="blue-grey lighten-5">
+                  <v-card-title>Config</v-card-title>
+                </div>
+                <v-card-text>
+                  <pre id="textConfig"></pre>
+                </v-card-text>
+              </v-card>
+              <!-- config -->
+            </div>
+          </v-container>
+        </v-main>
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
+
+<style></style>
