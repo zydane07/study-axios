@@ -23,7 +23,7 @@
       <v-app>
         <v-main>
           <v-container>
-            <h1 class="font-weight-bold text-center my-5">BELAJAR AXIOS</h1>
+            <h1 class="font-weight-bold text-center my-5">{{title}}</h1>
             <v-layout row class="justify-center mx-4" style="gap: 0.5rem">
               <v-btn depressed small color="primary" id="get" @click="getTodos">
                 GET
@@ -114,7 +114,7 @@
             <div id="res" ref="res" class="d-none">
               <!-- respon -->
               <v-card outlined class="mx-auto mt-5" rounded="lg">
-                <v-card-title class="font-weight-bold" id="status"
+                <v-card-title class="font-weight-bold" id="status" 
                   >Status:
                 </v-card-title>
               </v-card>
